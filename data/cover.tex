@@ -1,0 +1,133 @@
+\thusetup{
+  %******************************
+  % 注意：
+  %   1. 配置里面不要出现空行
+  %   2. 不需要的配置信息可以删除
+  %******************************
+  %
+  %=====
+  % 秘级
+  %=====
+  %secretlevel={秘密},
+  %secretyear={10},
+  %
+  %=========
+  % 中文信息
+  %=========
+  ctitle={基于Vive VR的遥操作机械手},
+  cdegree={},
+  cdepartment={},
+  cmajor={},
+  cauthor={张庭梁},
+  csupervisor={},
+  cassosupervisor={}, % 副指导老师
+  ccosupervisor={}, % 联合指导老师
+  % 日期自动使用当前时间，若需指定按如下方式修改：
+  % cdate={超新星纪元},
+  %
+  % 博士后专有部分
+  cfirstdiscipline={计算机科学与技术},
+  cseconddiscipline={系统结构},
+  postdoctordate={2009年7月——2011年7月},
+  id={编号}, % 可以留空： id={},
+  udc={UDC}, % 可以留空
+  catalognumber={分类号}, % 可以留空
+  %
+  %=========
+  % 英文信息
+  %=========
+  etitle={Vive VR Based Robot Remote Control System},
+  % 这块比较复杂，需要分情况讨论：
+  % 1. 学术型硕士
+  %    edegree：必须为Master of Arts或Master of Science（注意大小写）
+  %             “哲学、文学、历史学、法学、教育学、艺术学门类，公共管理学科
+  %              填写Master of Arts，其它填写Master of Science”
+  %    emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+  % 2. 专业型硕士
+  %    edegree：“填写专业学位英文名称全称”
+  %    emajor：“工程硕士填写工程领域，其它专业学位不填写此项”
+  % 3. 学术型博士
+  %    edegree：Doctor of Philosophy（注意大小写）
+  %    emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+  % 4. 专业型博士
+  %    edegree：“填写专业学位英文名称全称”
+  %    emajor：不填写此项
+  edegree={Doctor of Engineering},
+  emajor={Computer Science and Technology},
+  eauthor={Zhang Tingliang},
+  esupervisor={},
+  eassosupervisor={},
+  % 日期自动生成，若需指定按如下方式修改：
+  % edate={December, 2005}
+  %
+  % 关键词用“英文逗号”分割
+  ckeywords={虚拟现实,远程控制,机器人},
+  ekeywords={\TeX, \LaTeX, CJK, template, thesis}
+}
+
+% 定义中英文摘要和关键字
+% 
+% 简化操作，降低成本，提高用户体验  实时性
+% 
+\begin{cabstract}
+
+随着机器人技术的发展，机器人的应用场景越来越多。但是目前自动控制机器人尚不能执行多数复杂任务，特别是抢险救灾等需要随机应变的任务，这种情况下需要遥操作机器人。
+
+目前机械臂远程控制普遍采用手柄或键盘控制方式，且监控方式普遍为摄像头图像显示在监视器上，与现场操作差别很大。
+
+为此，我们开发了一套用VR设备远程控制机器人的系统以及配套的三维实时场景采集及图传系统，使操作者能有身临其境的操作体验，大幅降低成本的同时减小了延迟。
+
+我们采用双目摄像头采集实时场景信息，两个目采集到的图像对应到VR眼镜的两个显示屏中，同时多自由度双目支架保证双目朝向和操作者双眼朝向一致，从而简单的使操作者可以看到实时的立体场景。
+
+虚拟现实头盔和追踪器上的红外定位模块精确的确定了它们的绝对位置，由此可得它们的相对位置，我们可以使机械臂末端和双目摄像头的相对位置和其一致，从而实现操作者直接用手的位置来控制机械臂。
+
+ \bigbreak
+创新点及优势：
+  \begin{itemize}
+    \item 我们开发的由双目摄像头及VR显示系统组成的三维实时场景采集系统较图像拼接和场景重构实时性好，且对算力要求不高。
+    \item 手持Vive追踪器操作机械臂末端符合我们日常使用手进行操作的习惯。较外骨骼和Optitrack运动捕捉系统廉价，且能够满足绝大部分需求。
+  \end{itemize} 
+  \bigbreak
+
+经测试，本系统延迟很低，操作简单，且方便迁移至其他系统。
+
+此系统可以帮助技术人员远程执行任务，而无需复杂的遥操作培训和练习。未来可以用于航天，拆弹，救援，深海作业，远程交互等领域。
+
+DEMO视频： 
+
+\url{https://www.bilibili.com/video/av22793262/}
+
+\url{https://www.youtube.com/watch?v=FyyUoBJ_JLY}
+
+
+\end{cabstract}
+
+% 如果习惯关键字跟在摘要文字后面，可以用直接命令来设置，如下：
+% \ckeywords{\TeX, \LaTeX, CJK, 模板, 论文}
+
+\begin{eabstract}
+With the development of robotics, there are more and more application scenarios for robots. However, at present, robots that are controlled automatically cannot perform most of the complex tasks. In this case, robots must be operated remotely.
+
+At present, the remote control of the robotic arm generally adopts a handle or a keyboard control method, and the monitoring method is generally that the camera image is displayed on the monitor, which is very different from the on-site operation.
+
+To this end, we have developed a system for remotely controlling robots with VR devices and an associated three-dimensional real-time scene acquisition and image transmission system that enables operators to have an immersive operating experience that significantly reduces costs while reducing latency.
+
+We use a binocular camera to collect real-time scene information. The images collected by the two targets correspond to the two display screens of the VR glasses. At the same time, the multi-degree-of-freedom binocular support ensures that the binocular orientation and the eyes of the operator are the same, thus making it simple to use. The operator can see real-time stereoscopic scenes.
+
+The infrared positioning module on the virtual reality helmet and tracker accurately determines their absolute positions, and thus their relative positions can be obtained. We can make the relative positions of the end of the robot arm and the binocular camera coincide with each other, thereby realizing the operator. The position of the hand directly controls the arm.
+
+\bigbreak
+Innovation and advantages:
+   \begin{itemize}
+     \item We have developed a three-dimensional real-time scene collection system consisting of a binocular camera and a VR display system. Compared with image stitching and scene reconstruction, the real-time performance is good, and it does not require high computational power.
+     \item Hand-held Vive trackers operate at the end of the arm in line with our habit of using the hand to operate. Compared to the exoskeleton and Optitrack motion capture system is cheap, and can meet most of the needs.
+   \end{itemize}
+   \bigbreak
+
+After testing, the system has low delay, simple operation, and easy migration to other systems.
+
+This system can help technicians perform tasks remotely without complicated teleoperation training and exercises. The future can be used in aerospace, bomb disposal, rescue, deep-sea operations, remote interaction and other fields.
+
+\end{eabstract}
+
+% \ekeywords{\TeX, \LaTeX, CJK, template, thesis}
